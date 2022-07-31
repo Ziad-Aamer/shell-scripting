@@ -71,7 +71,9 @@ git push origin ${TAG_VERSION}
 
 Git APIs
 -----------------------
-# create new repo for user Ziad-Aamer, with name shell-scipting
 
-curl -u Ziad-Aamer:$git_token https://api.github.com/user/repos -d '{"name":"shell-scripting"}
+curl -u $username:$git_token https://api.github.com/user/repos -d '{"name":"repo-name"}'
+
+# create new repo for user Ziad-Aamer, with name shell-scipting
+curl -u Ziad-Aamer:$git_token https://api.github.com/user/repos -d '{"name":"shell-scripting"}'
 
