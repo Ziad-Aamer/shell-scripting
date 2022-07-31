@@ -67,3 +67,11 @@ git push --delete origin v1.0
 TAG_VERSION=v1.6.4
 git tag ${TAG_VERSION} -m ${TAG_VERSION}
 git push origin ${TAG_VERSION}
+
+
+Git APIs
+-----------------------
+# create new repo for user Ziad-Aamer, with name shell-scipting
+
+curl -u Ziad-Aamer:$git_token https://api.github.com/user/repos -d '{"name":"shell-scripting"}
+
