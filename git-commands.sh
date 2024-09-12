@@ -1,4 +1,16 @@
 ---------------------------------
+Configuration
+---------------------------------
+# Get configuration locally (in a repo)
+git config --list
+
+# Get global config (system)
+git config --list --show-origin
+
+# Edit global configuration
+git config --edit --global
+ 
+---------------------------------
 Branches
 ---------------------------------
 # fetch & prune changes (deleted branches will be stated that it is deleted form remote,...)

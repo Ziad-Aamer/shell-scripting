@@ -20,3 +20,15 @@ awk is used to select columns or rows from a formatted file e.g: csv, tsv by spe
 Ex1: this will use ';' as a seprator and print the first columns only of a file   
 
 `$ awk -F ";" '{print $1, $2}' filename` 
+
+
+### Nano
+
+* Copy: 
+	* set mark to highlight the text: `ctl+6`
+	* Copy highlighted `alt+6`
+	* Paste copied `ctl+u`
+* undo/redo:
+	* undo: `alt+u`
+	* redo: `alt+e`
+
