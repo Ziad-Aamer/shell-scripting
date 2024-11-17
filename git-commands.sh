@@ -61,11 +61,34 @@ Reverting commits
 # create a new commit that reverts the commit by creating a new one as undo
 git revert 1kjdi21j 
 
-# Remove changes from latest commit from local
+# Remove the latest commit from local
 git reset --hard HEAD~1
+
+# Dicards local changes & reset local branch to specific commit (you can after this force push to remote branch to overwirte changes)
+git reset --hard commit_id
 
 # After removing latest commit from local, we can force the removal of the latest commit in remote (do NOT do this in master/release branches) 
 git push -f origin branch_name
+
+
+Differences
+---------------------------
+# show your changes vs last committed
+git diff
+
+# show the last commit changes (difference between HEAD and the commit before it)
+git diff HEAD^ HEAD
+
+
+Conflicts
+---------------------------------
+# If unable to merge to a branch because of conflicts, you rebase your commits on top of the other branch
+# The below will make the pull rebase, instead of doing fast-forward
+git config pull.rebase true
+
+# Then pull from the branch you want to base your commits (from the other branch) upon
+git pull origin master
+
 
 -----------------------------------------------------
 Merging
@@ -102,23 +125,3 @@ curl -u $username:$git_token https://api.github.com/user/repos -d '{"name":"repo
 curl -u Ziad-Aamer:$git_token https://api.github.com/user/repos -d '{"name":"shell-scripting"}'
 
 
-Differences
----------------------------
-# show your changes vs last committed
-git diff
-
-# show the last commit changes (difference between HEAD and the commit before it)
-git diff HEAD^ HEAD
-
-
-Conflicts
----------------------------------
-# If unable to merge to a branch because of conflicts, you rebase your commits on top of the other branch
-# The below will make the pull rebase, instead of doing fast-forward
-git config pull.rebase true
-
-# Then pull from the branch you want to base your commits (from the other branch) upon
-git pull origin feat/mcs-develop
-
-#
-git push -f origin branch_name
