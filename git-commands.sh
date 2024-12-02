@@ -9,6 +9,10 @@ git config --list --show-origin
 
 # Edit global configuration
 git config --edit --global
+
+# add username and email locally
+git config user.name "Your Name Here"
+git config user.email your@email.example
  
 ---------------------------------
 Branches
